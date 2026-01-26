@@ -14,6 +14,8 @@ router.post(
   userController.createUserController,
 );
 
+router.post("/users/login", userController.loginUserController);
+
 router.get("/users", userController.findAllUserController);
 router.get("/users/:id", validateUserId, userController.findUserByIdController);
 router.patch("/users/:id", validateUserId, userController.updateUserController);
